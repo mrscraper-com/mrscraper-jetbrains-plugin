@@ -1,0 +1,76 @@
+<idea-plugin>
+    <id>com.mrscraper.mcp</id>
+    <name>MrScraper MCP</name>
+    <vendor email="support@mrscraper.com" url="https://mrscraper.com">MrScraper</vendor>
+
+    <description><![CDATA[
+        <p>Connect the AI agents in your JetBrains IDE to <a href="https://mrscraper.com">MrScraper</a>'s
+        hosted <a href="https://docs.mrscraper.com/docs/getting-started/mcp-server">MCP server</a> for
+        web scraping, structured data extraction, and Google search.</p>
+
+        <p><b>Getting started</b></p>
+        <ol>
+            <li>Create an API key at <a href="https://app.mrscraper.com/api-tokens">app.mrscraper.com/api-tokens</a>.
+                The free plan includes 1,000 tokens a month.</li>
+            <li>Click <b>Connect…</b> in the notification that appears, or choose
+                <b>Tools | Connect MrScraper MCP…</b>, and paste the key.</li>
+            <li>If the IDE asks whether to enable the <code>mrscraper</code> MCP server, accept it.</li>
+        </ol>
+
+        <p>One connection covers every JetBrains AI agent that reads the shared MCP configuration
+        (<code>~/.ai/mcp/mcp.json</code>), including AI Assistant, Junie, Codex, Claude, and GitHub Copilot.</p>
+
+        <p><b>What your AI agent can do</b></p>
+        <ul>
+            <li>Fetch a web page's raw HTML, with optional browser rendering and geo-targeting</li>
+            <li>Extract fields from a page, or records from a paginated listing, as structured JSON</li>
+            <li>Map a website's URLs</li>
+            <li>Search Google and get parsed results</li>
+            <li>Rerun saved scrapers, read stored results, and check plan usage</li>
+        </ul>
+
+        <p><b>Data and privacy</b></p>
+        <p>The plugin checks your API key with MrScraper, saves it in the IDE password storage, and adds it to
+        the shared MCP configuration file so your AI agents can authenticate. The plugin collects no telemetry.
+        When an AI agent uses MrScraper, the target URLs and tool inputs go to MrScraper. Manage the
+        connection in <b>Settings | Tools | MrScraper MCP</b>; uninstalling the plugin removes the
+        <code>mrscraper</code> entry.</p>
+
+        <p><a href="https://docs.mrscraper.com/docs/getting-started/mcp-server">Documentation</a> ·
+        <a href="https://mrscraper.com/privacy-policy">Privacy policy</a> ·
+        <a href="https://mrscraper.com/terms-of-use">Terms of use</a> ·
+        <a href="mailto:support@mrscraper.com">Support</a></p>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <b>0.1.0</b>
+        <ul>
+            <li>First release: connect JetBrains AI agents to the hosted MrScraper MCP server with an API key.</li>
+        </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="com.mrscraper.mcp.MrScraperMcpStartupActivity"/>
+        <applicationConfigurable parentId="tools"
+                                 id="com.mrscraper.mcp.settings"
+                                 displayName="MrScraper MCP"
+                                 instance="com.mrscraper.mcp.MrScraperMcpConfigurable"/>
+        <notificationGroup id="MrScraper MCP" displayType="BALLOON"/>
+    </extensions>
+
+    <applicationListeners>
+        <listener class="com.mrscraper.mcp.PluginLifecycleListener"
+                  topic="com.intellij.ide.plugins.DynamicPluginListener"/>
+    </applicationListeners>
+
+    <actions>
+        <action id="com.mrscraper.mcp.Connect"
+                class="com.mrscraper.mcp.ConnectAction"
+                text="Connect MrScraper MCP…"
+                description="Connect the AI agents in your IDE to the MrScraper MCP server">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
