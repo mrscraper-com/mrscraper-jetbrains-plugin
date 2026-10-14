@@ -6,7 +6,7 @@
     <description><![CDATA[
         <p>Connect the AI agents in your JetBrains IDE to <a href="https://mrscraper.com">MrScraper</a>'s
         hosted <a href="https://docs.mrscraper.com/docs/getting-started/mcp-server">MCP server</a> for
-        web scraping, structured data extraction, and Google search.</p>
+        web scraping and Google search.</p>
 
         <p><b>Getting started</b></p>
         <ol>
@@ -22,11 +22,10 @@
 
         <p><b>What your AI agent can do</b></p>
         <ul>
-            <li>Fetch a web page's raw HTML, with optional browser rendering and geo-targeting</li>
-            <li>Extract fields from a page, or records from a paginated listing, as structured JSON</li>
-            <li>Map a website's URLs</li>
+            <li>Retrieve a web page as HTML, Markdown, a screenshot, or a combination, with automatic
+                browser fallback, real-device routing, and geo-targeting</li>
             <li>Search Google and get parsed results</li>
-            <li>Rerun saved scrapers, read stored results, and check plan usage</li>
+            <li>Check plan usage and remaining tokens</li>
         </ul>
 
         <p><b>Data and privacy</b></p>
@@ -43,6 +42,11 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        <b>0.1.1</b>
+        <ul>
+            <li>Describe the MCP server's current tools: page retrieval as HTML, Markdown, or screenshots,
+                Google search, and account usage.</li>
+        </ul>
         <b>0.1.0</b>
         <ul>
             <li>First release: connect JetBrains AI agents to the hosted MrScraper MCP server with an API key.</li>
