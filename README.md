@@ -2,7 +2,7 @@
 
 Connects the AI agents in your JetBrains IDE to MrScraper's hosted
 [MCP server](https://docs.mrscraper.com/docs/getting-started/mcp-server) for web
-scraping, structured data extraction, and Google search.
+scraping and Google search.
 
 One connection covers every JetBrains AI agent that reads the shared MCP
 configuration, `~/.ai/mcp/mcp.json`: AI Assistant, Junie, Codex, Claude, and

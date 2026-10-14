@@ -29,7 +29,7 @@ class ConnectDialog(private val project: Project?) : DialogWrapper(project, true
         row {
             text(
                 "Gives the AI agents in your IDE, such as AI Assistant, Junie, and GitHub Copilot, " +
-                    "MrScraper's tools for fetching web pages, extracting structured data, and searching Google.",
+                    "MrScraper's tools for retrieving web pages and searching Google.",
                 maxLineLength = 70,
             )
         }
