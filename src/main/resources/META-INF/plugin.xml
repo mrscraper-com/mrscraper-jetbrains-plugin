@@ -10,8 +10,7 @@
 
         <p><b>Getting started</b></p>
         <ol>
-            <li>Create an API key at <a href="https://app.mrscraper.com/api-tokens">app.mrscraper.com/api-tokens</a>.
-                The free plan includes 1,000 tokens a month.</li>
+            <li>Create an API key at <a href="https://app.mrscraper.com/api-tokens">app.mrscraper.com/api-tokens</a>.</li>
             <li>Click <b>Connect…</b> in the notification that appears, or choose
                 <b>Tools | Connect MrScraper MCP…</b>, and paste the key.</li>
             <li>If the IDE asks whether to enable the <code>mrscraper</code> MCP server, accept it.</li>
