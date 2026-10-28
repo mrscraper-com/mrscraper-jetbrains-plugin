@@ -11,8 +11,7 @@ GitHub Copilot.
 ## Requirements
 
 - A JetBrains IDE, version 2025.1 or later, with an AI agent plugin installed.
-- A [MrScraper](https://app.mrscraper.com) account. The free plan includes
-  1,000 tokens a month.
+- A [MrScraper](https://app.mrscraper.com) account.
 
 ## Install and connect
 
