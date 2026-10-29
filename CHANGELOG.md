@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- Reworded search as web search in the Marketplace description, the README,
+  and the connect dialog.
+
 ## 0.1.1
 
 - Describe the MCP server's current tools (page retrieval as HTML, Markdown, or
