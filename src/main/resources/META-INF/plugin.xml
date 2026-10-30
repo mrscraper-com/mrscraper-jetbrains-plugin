@@ -6,7 +6,7 @@
     <description><![CDATA[
         <p>Connect the AI agents in your JetBrains IDE to <a href="https://mrscraper.com">MrScraper</a>'s
         hosted <a href="https://docs.mrscraper.com/docs/getting-started/mcp-server">MCP server</a> for
-        web scraping and Google search.</p>
+        web scraping and web search.</p>
 
         <p><b>Getting started</b></p>
         <ol>
@@ -23,7 +23,7 @@
         <ul>
             <li>Retrieve a web page as HTML, Markdown, a screenshot, or a combination, with automatic
                 browser fallback, real-device routing, and geo-targeting</li>
-            <li>Search Google and get parsed results</li>
+            <li>Search the web and get parsed results</li>
             <li>Check plan usage and remaining tokens</li>
         </ul>
 
@@ -41,10 +41,14 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        <b>0.1.2</b>
+        <ul>
+            <li>Updated the wording of the plugin description and the connect dialog.</li>
+        </ul>
         <b>0.1.1</b>
         <ul>
             <li>Describe the MCP server's current tools: page retrieval as HTML, Markdown, or screenshots,
-                Google search, and account usage.</li>
+                web search, and account usage.</li>
         </ul>
         <b>0.1.0</b>
         <ul>
