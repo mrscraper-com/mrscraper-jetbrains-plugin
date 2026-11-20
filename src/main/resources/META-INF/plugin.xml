@@ -21,10 +21,18 @@
 
         <p><b>What your AI agent can do</b></p>
         <ul>
-            <li>Retrieve a web page as HTML, Markdown, a screenshot, or a combination, with automatic
-                browser fallback, real-device routing, and geo-targeting</li>
-            <li>Search the web and get parsed results</li>
-            <li>Check plan usage and remaining tokens</li>
+            <li><code>status</code>: Return the raw account status API response without summarizing, redacting
+                body fields, or adding calculated fields.</li>
+            <li><code>scrapeHtml</code>: Retrieve the raw HTML of a page. Browser rendering is optional.</li>
+            <li><code>scrapeMarkdown</code>: Retrieve a page as Markdown. Including HTML also enables browser
+                rendering and returns both outputs as JSON.</li>
+            <li><code>getScreenshot</code>: Capture a base64 screenshot of the full page or top viewport. Browser
+                rendering is always enabled.</li>
+            <li><code>scrapeBrand</code>: Extract a website's colors, typography, logos, and social links as JSON.</li>
+            <li><code>scrapeJson</code>: Extract structured JSON from a page using a natural-language prompt.
+                Append Json Schema: and a JSON schema to shape the output.</li>
+            <li><code>webSearch</code>: Search the web and return ranked results with titles, URLs, descriptions,
+                and sources.</li>
         </ul>
 
         <p><b>Data and privacy</b></p>
@@ -41,6 +49,12 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        <b>0.1.3</b>
+        <ul>
+            <li>The description lists the seven tools of MrScraper MCP server 0.5.0: status, scrapeHtml,
+                scrapeMarkdown, getScreenshot, scrapeBrand, scrapeJson, and webSearch. Existing connections keep
+                working.</li>
+        </ul>
         <b>0.1.2</b>
         <ul>
             <li>Updated the wording of the plugin description and the connect dialog.</li>
