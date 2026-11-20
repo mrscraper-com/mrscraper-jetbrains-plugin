@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.3
+
+- List the seven tools of MrScraper MCP server 0.5.0 (`status`, `scrapeHtml`,
+  `scrapeMarkdown`, `getScreenshot`, `scrapeBrand`, `scrapeJson`, `webSearch`)
+  in the Marketplace description and the README. Existing connections keep
+  working.
+
 ## 0.1.2
 
 - Reworded search as web search in the Marketplace description, the README,

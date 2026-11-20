@@ -25,8 +25,24 @@ GitHub Copilot.
 Try it with your AI agent:
 
 ```text
-Fetch https://www.scrapethissite.com/pages/simple/ and summarize the page.
+Fetch https://www.scrapethissite.com and summarize the page.
 ```
+
+## Tools
+
+The hosted MCP server gives your AI agent seven tools:
+
+| Tool | What it does |
+| --- | --- |
+| `status` | Return the raw account status API response without summarizing, redacting body fields, or adding calculated fields. |
+| `scrapeHtml` | Retrieve the raw HTML of a page. Browser rendering is optional. |
+| `scrapeMarkdown` | Retrieve a page as Markdown. Including HTML also enables browser rendering and returns both outputs as JSON. |
+| `getScreenshot` | Capture a base64 screenshot of the full page or top viewport. Browser rendering is always enabled. |
+| `scrapeBrand` | Extract a website's colors, typography, logos, and social links as JSON. |
+| `scrapeJson` | Extract structured JSON from a page using a natural-language prompt. Append Json Schema: and a JSON schema to shape the output. |
+| `webSearch` | Search the web and return ranked results with titles, URLs, descriptions, and sources. |
+
+The six scraping and search tools use tokens from your MrScraper plan.
 
 ## What the plugin changes
 
